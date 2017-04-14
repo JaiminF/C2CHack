@@ -1,5 +1,6 @@
 package in.tagclub.goalplusplus;
 
+import android.content.Intent;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -7,6 +8,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class BottomNavHome extends AppCompatActivity {
 
@@ -41,11 +43,22 @@ public class BottomNavHome extends AppCompatActivity {
                             case R.id.nav_goal:
                                 fragment = new GoalFragment();
                                 break;
+                            case R.id.nav_logout:
+                                Toast.makeText(BottomNavHome.this, "Logout Successful!", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(BottomNavHome.this, SignInActivity.class);
+                                startActivity(intent);
+                                break;
                         }
                         final FragmentTransaction transaction = fragmentManager.beginTransaction();
                         transaction.replace(R.id.content, fragment).commit();
                         return true;
                     }
                 });
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        finish();
     }
 }

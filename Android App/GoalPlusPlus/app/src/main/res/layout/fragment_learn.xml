@@ -5,6 +5,10 @@
     android:id="@+id/frag_learn"
     tools:context="in.tagclub.goalplusplus.LearnFragment">
 
-    
+    <WebView
+        android:id="@+id/learn_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 
 </FrameLayout>
