@@ -1,2 +1,2 @@
 # C2CHack
-GOAL - Financial Literacy App
+GOAL ++ - Financial Literacy App
