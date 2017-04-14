@@ -22,13 +22,27 @@
   		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 
-
+		<script>
+		$(document).ready(function(){
+$("#btn").click(function(){
+		document.getElementById('signup').style.display = "none";
+		document.getElementById('login').style.display = "block";
+});
+});
+		</script>
 	</head>
 	<body style="background-image:url(images/back.jpg); background-repeat: no-repeat; background-size: cover; color: white; font-family: Reem Kufi">
-	<form name="form1" method="POST" onsubmit="return vald()">
-		<div class="container" style="max-height:100%; margin-bottom:0px;">
 
-		<center>	<section style="margin-top: -30px;max-height:100%;padding-bottom: 0px;padding-top: 0px;">
+	<form name="form1" method="POST" onsubmit="return vald()">
+		<section id="btn">
+			<p style="float: right; margin-top: 20px; margin-bottom: 0px;">
+		<a href="goal.html">
+			<button class="btn btn-4 btn-4a" style="padding-bottom: 15px;" type="submit"><span style="color: white">Login</span></button>
+		</a>
+		</section>
+		<div class="container" style="margin-left: 10%; max-height:100%; margin-bottom:0px;">
+
+		<center>	<section id="signup" style="display: block; margin-top: -30px;max-height:100%;padding-bottom: 0px;padding-top: 0px;">
 				<img src="images/logo_white.png" style="height: 42%; width:45%;"><br>
 				<div class="form-group">
 				<span style="color: white" class="input input--shoko">
@@ -78,15 +92,68 @@
 					</svg>
 				</span>
 				</div>
-			</section>
-			<section>
 				<p style="margin-top: 0px; margin-bottom: 0px;">
 			<a href="goal.html">
 				<button class="btn btn-4 btn-4a" style="padding-bottom: 15px;" type="submit"><span style="color: white">SignUp</span></button>
 			</a>
 			</section>
 		</center>
-
+		<center>	<section id="login" style="display: none; margin-top: -30px;max-height:100%;padding-bottom: 0px;padding-top: 0px;">
+				<img src="images/logo_white.png" style="height: 42%; width:45%;"><br>
+				<div class="form-group">
+				<span style="color: white" class="input input--shoko">
+					<input class="form-control input-lg input__field input__field--shoko" type="text" id="fname" name="fullname" />
+					<label class="input__label input__label--shoko" for="fullname">
+						<span class="input__label-content input__label-content--shoko">Name</span>
+					</label>
+					<svg class="graphic graphic--shoko" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+						<path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span><br>
+				</div>
+        <div class="form-group">
+				<span class="input input--shoko">
+					<input class="form-control input-lg input__field input__field--shoko" type="number" id="ppno" name="parentno" />
+					<label class="input__label input__label--shoko" for="parentno">
+						<span class="input__label-content input__label-content--shoko">Parent's Phone Number</span>
+					</label>
+					<svg class="graphic graphic--shoko" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+						<path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span><br>
+				</div>
+				<div class="form-group">
+				<span class="input input--shoko">
+					<input class="form-control input-lg input__field input__field--shoko" type="text" id="goal" name="goal" />
+					<label class="input__label input__label--shoko" for="goal">
+						<span class="input__label-content input__label-content--shoko">Goal</span>
+					</label>
+					<svg class="graphic graphic--shoko" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+						<path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+				</div>
+				<div class="form-group">
+				<span class="input input--shoko">
+					<input class="form-control input-lg input__field input__field--shoko" type="number" id="budget" name="budget" />
+					<label class="input__label input__label--shoko" for="budget">
+						<span class="input__label-content input__label-content--shoko">Budget</span>
+					</label>
+					<svg class="graphic graphic--shoko" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+						<path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+				</div>
+				<p style="margin-top: 0px; margin-bottom: 0px;">
+			<a href="goal.html">
+				<button class="btn btn-4 btn-4a" style="padding-bottom: 15px;" type="submit"><span style="color: white">SignUp</span></button>
+			</a>
+			</section>
+		</center>
 		</div><!-- /container -->
 		</form>
 		<script src="js/classie.js"></script>
