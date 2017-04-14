@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.tagclub.goalplusplus.GoalDefine"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/imageButtonLearn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="2dp"
+        android:layout_margin="2dp"
+        android:background="#fff"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/image_learn" />
+    <ImageButton
+        android:id="@+id/imageButtonBudget"
+        android:layout_width="wrap_content"
+        android:background="#fff"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:layout_weight="1"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/image_budget" />
+    <ImageButton
+        android:id="@+id/imageButtonGoal"
+        android:layout_width="wrap_content"
+        android:background="#fff"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_weight="1"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/image_set_goal" />
+
+</LinearLayout>
