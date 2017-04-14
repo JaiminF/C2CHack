@@ -29,6 +29,14 @@
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
   <!--Initialising css folders-->
 	<link rel="stylesheet" href="css/materialize.min.css">
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
@@ -48,12 +56,29 @@
 		<!--[if IE]>
   		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
+		<script>
+		$(document).ready(function(){
+$("#navbar").mouseover(function(){
+		document.getElementById('nav').style.display = "block";
+});
+});
+		</script>
 
 	</head>
 	<body style="background-image:url(images/back.jpg); background-repeat: no-repeat; background-size: cover; color: black; font-family: Roboto">
-	<div style="background-color: white; height: 30px; width: 100%; margin-top: 0px">
+	<div id="navbar" style="background-color: white; position: fixed; height: 30px; width: 100%; margin-top: -245px">
     <center><img style="margin-top: -35px; height: 100px; width: 100px" src="images/mini_logo.png"></center>
   </div>
+	<div id="nav" style="display:none">
+		<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a href="#">Learn</a></li>
+      <li><a href="#">Budget</a></li>
+    </ul>
+  </div>
+</nav>
+	</div>
 
 
   <div style="margin-top: 19%; height: 90%; font-family: Roboto">
@@ -167,6 +192,7 @@
 			$(document).ready(function(){
 	$("#six").click(function(){
 			document.getElementById('seven').style.display = "block";
+			Materialize.toast('Congrats! You\'re one step closer towards your goal!', 5000, 'rounded')
 	});
 });
 			</script>
